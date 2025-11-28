@@ -17,51 +17,55 @@ El proyecto demuestra conocimientos de Views, Layouts, Data Binding, Intents exp
 
 ## 🖼️ Capturas de Pantalla
 
-Pantalla Principal – MainActivity
+- Pantalla Principal – MainActivity
 
+![Empate1](Empate.png)
 
-Pantalla de Resultados – ScoreActivity
+![GanaLakers1](GanaLakers1.png)
 
+![GanaBulls1](GanaBulls1.png)
 
-🏗️ Arquitectura de la Aplicación
+- Pantalla de Resultados – ScoreActivity
 
-MainActivity:
+![Empate2](Empate.png)
 
-Contadores dinámicos de puntos (+1, +2, -1)
+![GanaLakers2](GanaLakers2.png)
 
-Botón Reiniciar para restablecer puntos a 0 🔄
+![GanaBulls2](GanaBulls2.png)
 
-Botón Siguiente para navegar a ScoreActivity ➡️
+## 🏗️ Arquitectura de la Aplicación
 
-ScoreActivity:
+### MainActivity:
 
-Muestra los puntos finales en formato X - Y
+- Contadores dinámicos de puntos (+1, +2, -1)
 
-Determina automáticamente el ganador o empate
+- Botón Reiniciar para restablecer puntos a 0 🔄
 
-Mensajes visuales con emojis:
+- Botón Siguiente para navegar a ScoreActivity ➡️
 
-🏀🎉 Equipo ganador
+### ScoreActivity:
 
-⚔️ Empate
+- Muestra los puntos finales en formato X - Y
 
-🛠️ Tecnologías y Conceptos Usados
+- Determina automáticamente el ganador o empate
 
-Android Studio
+## 🛠️ Tecnologías y Conceptos Usados
 
-Java y Data Binding 📌
+- Android Studio
 
-Layouts: RelativeLayout (MainActivity) y RelativeLayout + TextView (ScoreActivity)
+- Java y Data Binding 📌
 
-Intents explícitos para pasar datos entre Activities
+- Layouts: RelativeLayout (MainActivity) y RelativeLayout + TextView (ScoreActivity)
 
-Strings.xml y recursos de colores para mantener buena organización
+- Intents explícitos para pasar datos entre Activities
 
-Validación de puntos (no negativos)
+- Strings.xml y recursos de colores para mantener buena organización
 
-Bordes y estilos mediante drawables XML
+- Validación de puntos (no negativos)
 
-⚡ Funcionalidades Principales
+- Bordes y estilos mediante drawables XML
+
+## ⚡ Funcionalidades Principales
 
 ✅ Sumar y restar puntos de ambos equipos
 
@@ -75,7 +79,7 @@ Bordes y estilos mediante drawables XML
 
 ✅ Data Binding para acceso seguro a todas las vistas
 
-📌 Constantes y Buenas Prácticas
+## 📌 Constantes y Buenas Prácticas
 
 Se han definido constantes para las claves de Intent, evitando strings repetidos:
 
@@ -84,68 +88,69 @@ public static final String EXTRA_VISITANTE_NAME = "NOMBRE_VISITANTE";
 public static final String EXTRA_PUNTOS_LOCAL = "PUNTOS_LOCAL";
 public static final String EXTRA_PUNTOS_VISITANTE = "PUNTOS_VISITANTE";
 
-📖 Implementación Data Binding
+## 📖 Implementación Data Binding
 
-Eliminación completa de findViewById
+- Eliminación completa de findViewById
 
-Acceso directo a vistas usando binding.<id>
+- Acceso directo a vistas usando binding.<id>
 
-Mejora de legibilidad y seguridad de tipos
+- Mejora de legibilidad y seguridad de tipos
 
 binding.sumarUnoLocal.setOnClickListener(v -> {
     puntosLocal += 1;
     binding.puntosLocal.setText(String.valueOf(puntosLocal));
 });
 
-🎯 Testing
+## 🎯 Testing
 
-Se han probado todos los casos límite:
+### Se han probado todos los casos límite:
 
-Sumar y restar puntos, evitando negativos
+- Sumar y restar puntos, evitando negativos
 
-Reinicio de marcador
+- Reinicio de marcador
 
-Paso correcto de nombres y puntos a ScoreActivity
+- Paso correcto de nombres y puntos a ScoreActivity
 
-Visualización correcta del ganador o empate
+- Visualización correcta del ganador o empate
 
-🚀 Cómo Ejecutar la Aplicación
+## 🚀 Cómo Ejecutar la Aplicación
 
-Clonar el repositorio:
+- Clonar el repositorio:
 
 git clone https://github.com/tu_usuario/basketball-score-app.git
 
-
-Abrir en Android Studio:
+- Abrir en Android Studio:
 
 File → Open → Selecciona la carpeta del proyecto
 
-Sincronizar Gradle:
+- Sincronizar Gradle:
 
 Android Studio te pedirá sincronizar automáticamente.
 
-Ejecutar en emulador o dispositivo físico:
+- Ejecutar en emulador o dispositivo físico:
 
 Selecciona un emulador API 21+ o un dispositivo Android conectado
 
 Pulsa Run ▶️
 
-Probar la app:
+- Probar la app:
 
 Sumar y restar puntos en MainActivity
 
-Reiniciar marcador con 🔄
+- Reiniciar marcador con 🔄
 
 Navegar a ScoreActivity para ver resultados finales
 
-⚠️ Posibles Errores y Soluciones
+## ⚠️ Posibles Errores y Soluciones
+
 Error	Posible Causa	Solución
 Crash al pulsar “Siguiente”	ScoreActivity no registrada en Manifest o layout mal nombrado	Verificar que ScoreActivity está en AndroidManifest.xml y el layout es activity_score.xml
 NullPointer en EditText visitante	ID mal escrito o Data Binding no generado	Revisar que EditText tiene android:id="@+id/textViewVisitante" y hacer rebuild del proyecto
 Valores negativos	Restar puntos sin validación	Se implementó validación para evitar que puntosLocal o puntosVisitante < 0
 Emojis no se muestran	Versión antigua de Android o fuente no compatible	Usar Unicode estándar (ej. ⚔️, 🏀) y probar en API 21+
 Layout se ve mal en pantalla pequeña	Uso de RelativeLayout con márgenes fijos	Considerar usar ConstraintLayout para layouts responsivos
-📝 Conclusión
+
+## 📝 Conclusión
 
 Este proyecto demuestra la implementación completa de una app Android funcional usando buenas prácticas, Data Binding y transferencia de datos entre Activities.
 Se ha prestado atención a la organización de recursos, claridad de UI y experiencia de usuario, cumpliendo todos los requisitos del trimestre.
