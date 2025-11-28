@@ -19,7 +19,7 @@ El proyecto demuestra conocimientos de Views, Layouts, Data Binding, Intents exp
 
 - Pantalla Principal – MainActivity
 
-![Empate1](Empate.png)
+![Empate1](Empate1.png)
 
 ![GanaLakers1](GanaLakers1.png)
 
@@ -27,7 +27,7 @@ El proyecto demuestra conocimientos de Views, Layouts, Data Binding, Intents exp
 
 - Pantalla de Resultados – ScoreActivity
 
-![Empate2](Empate.png)
+![Empate2](Empate2.png)
 
 ![GanaLakers2](GanaLakers2.png)
 
