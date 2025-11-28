@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <!-- La etiqueta layout activa Data Binding en este XML
+
+    Relative layout principal -->
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ScoreActivity"
+        android:padding="16dp"
+        android:background="@color/azulFondo">
+
+        <!-- Layout para los nombres de los equipos -->
+
+        <RelativeLayout
+            android:id="@+id/EquiposScore"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:background="@color/azulBotones">
+
+            <!-- TextView para el nombre del equipo local -->
+
+            <TextView
+                android:id="@+id/TextScoreLocal"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/NombreLocal"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <!-- TextView para el guión central -->
+
+            <TextView
+                android:id="@+id/guion"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/TextScoreLocal"
+                android:layout_toStartOf="@+id/TextScoreVisitante"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <!-- TextView para el nombre del equipo visitante -->
+
+            <TextView
+                android:id="@+id/TextScoreVisitante"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/NombreVisitante"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <!-- Layout para los puntos de ambos equipos -->
+
+        <RelativeLayout
+            android:id="@+id/ResultadoScore"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/EquiposScore"
+            android:background="@drawable/borde_layout"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp">
+
+            <!-- TextView para los puntos del equipo local -->
+
+            <TextView
+                android:id="@+id/TextScoreResultadoLocal"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/PuntosLocalScore"
+                android:textSize="50dp"
+                android:textColor="@color/white"/>
+
+            <!-- TextView para el guión central -->
+
+            <TextView
+                android:id="@+id/guionResultado"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/TextScoreResultadoLocal"
+                android:layout_toStartOf="@id/TextScoreResultadoVisitante"
+                android:text="-"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:textColor="@color/white"/>
+
+            <!-- TextView para los puntos del equipo visitante -->
+
+            <TextView
+                android:id="@+id/TextScoreResultadoVisitante"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="@string/PuntosVisitanteScore"
+                android:textSize="50dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <!-- Imagen central -->
+
+        <ImageView
+            android:id="@+id/Espadas"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/ResultadoScore"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/espadas"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Layout para mostral el ganador o empate -->
+
+        <RelativeLayout
+            android:id="@+id/GanadorOEmpateScore"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Espadas"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp">
+
+            <!-- TextView para mostrar el ganador o empate -->
+
+            <TextView
+                android:id="@+id/ResultadoGanadorOEmpate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/GanadorOEmpate"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

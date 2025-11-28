@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BasketballScore</string>
+    <string name="NombreLocal">Local</string>
+    <string name="ContadorLocal">0</string>
+    <string name="NombreVisitante">Visitante</string>
+    <string name="ContadorVisitante">0</string>
+    <string name="Menos1">- 1</string>
+    <string name="Mas1">+ 1</string>
+    <string name="Mas2">+ 2</string>
+    <string name="Recargar">↻</string>
+    <string name="SiguientePagina">➤</string>
+    <string name="GanadorOEmpate">Ganador</string>
+    <string name="PuntosLocalScore">0</string>
+    <string name="PuntosVisitanteScore">0</string>
+    <string name="TituloApp">Basketball Score</string>
+    <string name="Titulo">Basketball Score</string>
+</resources>

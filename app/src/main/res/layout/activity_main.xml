@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <!-- La etiqueta layout activa Data Binding en este XML
+
+    Relative layout principal -->
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:padding="16dp"
+        android:background="@color/azulFondo">
+
+        <!-- TextView para el nombre de la aplicación y para hacer el banner-->
+
+        <TextView
+            android:id="@+id/Banner"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:text="@string/Titulo"
+            android:textColor="@color/white"
+            android:background="@color/azulBotones"
+            android:textSize="25dp"/>
+
+        <!-- Layout para el equipo local -->
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@id/Banner">
+
+            <!-- EditText para el nombre del equipo local -->
+
+            <EditText
+                android:id="@+id/textViewLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:hint="@string/NombreLocal"
+                android:textColor="@color/white"
+                android:textSize="26dp" />
+
+            <!-- Boton de restar puntos-->
+
+            <Button
+                android:id="@+id/buttonRestarLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewLocal"
+                android:layout_marginTop="55dp"
+                android:backgroundTint="@color/azulBotones"
+                android:text="@string/Menos1" />
+
+            <!-- TextView para mostrar los puntos del equipo local -->
+
+            <TextView
+                android:id="@+id/puntosLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewLocal"
+                android:layout_marginTop="52dp"
+                android:gravity="center"
+                android:text="@string/ContadorLocal"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <!-- Boton para sumar 1 punto -->
+
+            <Button
+                android:id="@+id/sumarUnoLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewLocal"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/azulBotones"
+                android:text="@string/Mas1" />
+
+            <!-- Boton para sumar 2 puntos -->
+
+            <Button
+                android:id="@+id/sumarDosLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sumarUnoLocal"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/azulBotones"
+                android:text="@string/Mas2" />
+
+        </RelativeLayout>
+
+        <!-- Boton para reiniciar ambos contadores de puntos -->
+
+        <Button
+            android:id="@+id/BotonReiniciar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutLocal"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="110dp"
+            android:text="@string/Recargar"
+            android:backgroundTint="@color/azulBotones"
+            android:layout_marginStart="16dp"/>
+
+        <!-- Boton para ir a la siguiente pagina -->
+
+        <Button
+            android:id="@+id/BotonSiguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutLocal"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="110dp"
+            android:backgroundTint="@color/azulBotones"
+            android:text="@string/SiguientePagina"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Imagen central -->
+
+        <ImageView
+            android:id="@+id/ImagenCentro"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/relativeLayoutLocal"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:src="@drawable/escudo_baloncesto" />
+
+        <!-- Layout para el equipo visitante-->
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutVisitante"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_below="@+id/ImagenCentro"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Boton para restar puntos-->
+            <Button
+                android:id="@+id/buttonRestarVisitante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:backgroundTint="@color/azulBotones"
+                android:text="@string/Menos1" />
+
+            <!-- TextView para mostrar los puntos del equipo visitante -->
+
+            <TextView
+                android:id="@+id/puntosVisitante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:gravity="center"
+                android:text="@string/ContadorVisitante"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <!-- Boton para sumar 1 punto -->
+
+            <Button
+                android:id="@+id/sumarUnoVisitante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/azulBotones"
+                android:text="@string/Mas1" />
+
+            <!-- Botón para sumar 2 puntos -->
+
+            <Button
+                android:id="@+id/sumarDosVisitante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sumarUnoVisitante"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/azulBotones"
+                android:text="@string/Mas2" />
+
+            <!-- EditText para el nombre del equipo visitante -->
+
+            <EditText
+                android:id="@+id/textViewVisitante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sumarDosVisitante"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:hint="@string/NombreVisitante"
+                android:textColor="@color/white"
+                android:textSize="26dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>
